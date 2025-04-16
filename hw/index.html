@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Practise - Homework from Yaroslav</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        
+        <div id="auth-screen" class="center-box hidden">
+            <h2>Login</h2>
+            <input class="username-field" type="text" id="username" placeholder="Enter username" />
+            <button id="login-btn">🔐 Login</button>
+        </div>
+
+        <div id="main-app" class="hidden">
+            <header>
+                <h1>JS Practise App</h1>
+                <nav>
+                    <button class="tab-btn" data-tab="users">Users</button>
+                    <button class="tab-btn" data-tab="posts">Posts</button>
+                    <button class="tab-btn" data-tab="todos">Todos</button>
+                </nav>
+                <div class="theme-switch">
+                    <label for="theme-toggle">🌗 Theme</label>
+                    <input type="checkbox" id="theme-toggle" />
+                </div>
+            </header>
+
+            <main>
+                <section id="users-tab" class="tab-content hidden">
+                    <h2>👥 Users</h2>
+                    <input type="text" id="users-search" placeholder="Search users..." />
+                    <div id="users-list" class="card-container"></div>
+                    <div class="pagination">
+                        <button id="prev-users">Previous</button>
+                        <button id="next-users">Next</button>
+                    </div>
+                </section>
+
+                <section id="posts-tab" class="tab-content hidden">
+                    <h2>📝 Posts</h2>
+                    <input type="text" id="post-search" placeholder="Search posts..." />
+                    <div id="post-list" class="card-container"></div>
+                    <div class="pagination">
+                        <button id="prev-posts">Previous</button>
+                        <button id="next-posts">Next</button>
+                    </div>
+                </section>
+
+                <section id="todos-tab" class="tab-content hidden">
+                    <h2>✅ Todos</h2>
+                    <input type="text" id="input-todo" placeholder="New todo..." />
+                    <button id="add-todo">Add</button>
+                    <ol id="todo-list"></ol>
+                    <div class="pagination">
+                        <button id="prev-todos">Previous</button>
+                        <button id="next-todos">Next</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+    <script src="./index.js"></script>
+
+    </body>
+</html>
